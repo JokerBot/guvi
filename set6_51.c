@@ -22,8 +22,14 @@ int main()
            {
              str2len++;j++;
            }
+ 
+ //checking whether both strings are entered
+ if(str1len==0||str2len==0)
+           {printf("ERROR: both strings are required for multiplication\n");
+            printf("terminating the program");exit(1);}
 
- //converting  string1 to number
+
+//converting  string1 to number
 for(i=0;i<str1len;i++)
 {
     
