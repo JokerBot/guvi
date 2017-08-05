@@ -1,6 +1,5 @@
 #include<iostream>
 #include<string>
-#include<vector>
 static int max_palindrome=0;
 static int m[3];
 int* palindrome(const std::string&,int,int);
