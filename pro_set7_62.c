@@ -34,6 +34,9 @@ int main()
        s=palindrome(str,x,y);
     }
     
+    //checking for existence of palindrome
+    if(s[0]==0)
+    {cout<<"no palindrome found";exit(1);}
     
     int pal_start = s[1]-s[0];
     int pal_end = s[0]+s[2];
