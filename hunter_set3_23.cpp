@@ -7,17 +7,19 @@ public:
 int x,y,sum;
 };
 
-int dfs(int arr[][4],int x,int y,int sum,int  visit[][4])
+void dfs(int arr[][4],int x,int y,int sum,int  visit[][4])
 {
     
     visit[x][y]=1;
     stack<node> st;
-   
+   // cout<<x<<" "<<y<<endl;
+    //cout<<sum<<endl;
     //basecase
     if(x==3 && y==3)
     {  
         if(maxvalue<sum){maxvalue=sum;}
-        return arr[x][y];}
+        return;
+    }
     
     //right
     if(y<3)
@@ -43,13 +45,13 @@ int dfs(int arr[][4],int x,int y,int sum,int  visit[][4])
         int y1=st.top().y;
         int sum1=st.top().sum;
         
-        visit[x1][y1]==0;
-        res=dfs(arr,x1,y1,sum+sum1,visit);
+        visit[x1][y1]==1;
+        dfs(arr,x1,y1,sum+sum1,visit);
         st.pop();
         visit[x1][y1]==0;
         
     }
-    return maxvalue;
+   
 }
 
 
@@ -57,6 +59,6 @@ int main()
 {
     int arr[4][4]={{1,10,3,100},{12,2,9,6},{5,7,4,11},{3,7,16,5}};
      int visit[4][4]={{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
-    cout<<dfs(arr,0,0,arr[0][0],visit);
-   
+    dfs(arr,0,0,arr[0][0],visit);
+    cout<<maxvalue;
 }
