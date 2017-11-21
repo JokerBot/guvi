@@ -71,9 +71,11 @@ int main()
        
        
    }
-    cout<<"start("<<sx<<","<<sy<<")"<<endl;
-    cout<<"end ("<<fx<<","<<fy<<")"<<endl;
-    
+    if(maxv!=-99999)    
+    {cout<<"start("<<sx<<","<<sy<<")"<<endl;
+     cout<<"end ("<<fx<<","<<fy<<")"<<endl;
+    }
+    else{cout<<"no solution";}
     
     
 }
