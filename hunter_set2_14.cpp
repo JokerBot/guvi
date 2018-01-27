@@ -1,3 +1,4 @@
+//permutation
 #include<bits/stdc++.h>
 using namespace std;
 void swap(string &s,int a,int b)
