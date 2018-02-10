@@ -8,8 +8,11 @@ string calc(string s)
         for(int j=i-1;j>-1;j--)
         {
             if(s[i]>s[j])
-            {
-                temp=s[i]; s[i]=s[j]; s[j]=temp; return s;
+            {   
+                temp=s[i]; s[i]=s[j]; s[j]=temp; 
+                
+                sort(s.begin()+j+1, s.end());
+                return s;
             }
         }
         
