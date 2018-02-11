@@ -17,9 +17,7 @@ int main()
     int n;
     cin>>n;
     vector<string> res;
-    
     generate_paranthesis(res,"",n,n);
-    
-    for(int i=0;i<res.size();i++)
+    for(int i=res.size()-1;i>0;i--)
     {cout<<res[i]<<endl;}
 }
