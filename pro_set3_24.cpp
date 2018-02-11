@@ -2,7 +2,7 @@
 using namespace std;
 
 
-void calc(string s)
+void calc(string &s)
 {
     int i=s.length()-1;
     
